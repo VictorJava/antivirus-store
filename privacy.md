@@ -67,6 +67,8 @@ The App connects to the internet only to:
 4. **Ask Google Play Protect** for its status and list of harmful apps through Google Play services on your device
    (Tools tab).
 5. Send analytics and crash reports (section 3).
+6. Process purchases of the optional Premium subscription through **Google Play Billing**. Payment details are handled
+   by Google; the App only receives the subscription status and purchase token from Google Play.
 
 These requests do not include any of the on-device data from section 2. Like any HTTPS request, they reveal your IP
 address to the server that answers them.
@@ -85,6 +87,7 @@ address to the server that answers them.
 | Usage access (`PACKAGE_USAGE_STATS`) | Optional, granted in system settings: show when apps were last used in App audit. |
 | Request uninstall (`REQUEST_DELETE_PACKAGES`) | Open the system uninstall dialog for an app you chose to remove. |
 | Internet, network state, wake lock | Database updates and background work. |
+| Google Play Billing (`com.android.vending.BILLING`) | Buy and check the optional Premium subscription. |
 
 ---
 
